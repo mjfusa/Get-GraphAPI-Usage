@@ -1,23 +1,23 @@
 # Microsoft Graph API Usage Report Script
 
-This PowerShell script generates a comprehensive report of applications that call the Microsoft Graph API using the beta `getApiUsage` endpoint. It retrieves usage data and looks up application names by their GUIDs.
+This PowerShell script generates a comprehensive report of applications that call the Microsoft Graph API using the beta [getApiUsage](https://learn.microsoft.com/en-us/graph/api/reportroot-getapiusage?view=graph-rest-beta) endpoint. It retrieves usage data and looks up application names by their GUIDs.
+
+See this blog post for more details: [Tracking Microsoft Graph API Usage with PowerShell: A Guide for Admins](https://mjfnet.com/p/tracking-microsoft-graph-api-usage-with-powershell-a-guide-for-admins/)
 
 ## Prerequisites
 
 1. **PowerShell 5.1 or PowerShell 7+**
 2. **Microsoft Graph PowerShell SDK modules:**
-   ```powershell
-   Install-Module Microsoft.Graph.Authentication -Force
-   Install-Module Microsoft.Graph.Applications -Force
-   Install-Module Microsoft.Graph.Reports -Force
-   ```
+3. Run `Install-Prerequisites.ps1` to install the required modules.
 
 ## Required Permissions
 
 The script requires the following Microsoft Graph API permissions:
 - `Reports.Read.All` - To read usage reports
-- `Application.Read.All` - To read application information
-- `Directory.Read.All` - To read directory objects
+
+## Required User Roles (for Microsoft Entra)
+- **Reports Reader** 
+- **Global Reader** 
 
 ## Usage
 
