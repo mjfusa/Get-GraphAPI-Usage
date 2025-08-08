@@ -14,6 +14,8 @@ See this blog post for more details: [Tracking Microsoft Graph API Usage with Po
 
 The script requires the following Microsoft Graph API permissions:
 - `Reports.Read.All` - To read usage reports
+- `Application.Read.All` - To read application information
+- `Directory.Read.All` - To read directory information
 
 ## Required User Roles (for Microsoft Entra)
 - **Reports Reader** 
